@@ -2,7 +2,7 @@
 
 ## A dynamic, responsive full-stack web application built with MongoDB, Express.js, React, and Node.js (a.k.a. the MERN stack)
 
-This project was built along with a [Youtube tutorial series](https://www.youtube.com/watch?v=O3BUHwfHf84) showing how to create a fully functional full-stack application. This course guides you through setting up your development environment, building a RESTful API, managing your database and developing an interative frontend interface.
+This project was built along with a [Youtube tutorial series](https://www.youtube.com/watch?v=O3BUHwfHf84) showing how to create a fully functional full-stack application. This course guides you through setting up your development environment, building a RESTful API, managing your database and developing an interactive frontend interface.
 
 This web application allows the user to do the following:
 
