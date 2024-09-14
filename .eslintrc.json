@@ -2,6 +2,14 @@
     "extends": ["airbnb", "prettier", "plugin:node/recommended"],
     "plugins": ["prettier"],
     "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always",
+                "json": "always"
+            }
+        ],
         "prettier/prettier": "error",
         "no-unused-vars": "warn",
         "no-console": "off",
