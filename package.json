@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint backend",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier backend --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "type": "module",
   "keywords": [],
