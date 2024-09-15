@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/server.js",
+    "dev": "node --watch ./backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint backend",
     "lint:fix": "npm run lint -- --fix",
@@ -32,7 +32,6 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "nodemon": "^3.1.4",
     "prettier": "^3.3.3"
   }
 }
