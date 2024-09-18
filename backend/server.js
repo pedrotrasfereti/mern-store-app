@@ -9,6 +9,12 @@ dotenv.config();
 
 const app = express();
 
+// To parse JSON request bodies
+app.use(express.json());
+
+// To parse URL-encoded request bodies
+app.use(express.urlencoded({ extended: true }));
+
 app.post('/api/products', async (req, res) => {
   const product = req.body; // user will send this data
 
