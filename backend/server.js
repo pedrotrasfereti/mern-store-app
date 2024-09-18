@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 
 // Models
@@ -52,6 +53,12 @@ app.post('/api/products', async (req, res) => {
 app.delete('/api/products/:id', async (req, res) => {
   const { id } = req.params;
 
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res
+      .status(404)
+      .json({ success: false, message: 'Invalid product ID' });
+  }
+
   try {
     await Product.findByIdAndDelete(id);
     return res.status(200).json({ success: true, message: 'Product deleted' });
@@ -65,6 +72,12 @@ app.delete('/api/products/:id', async (req, res) => {
 app.put('/api/products/:id', async (req, res) => {
   const { id } = req.params;
   const product = req.body;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res
+      .status(404)
+      .json({ success: false, message: 'Invalid product ID' });
+  }
 
   try {
     const updatedProduct = await Product.findByIdAndUpdate(id, product, {
