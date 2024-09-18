@@ -15,8 +15,19 @@ app.use(express.json());
 // To parse URL-encoded request bodies
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/api/products', async (_req, res) => {
+  try {
+    const products = await Product.find();
+    res.status(200).json({ success: true, data: products });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ success: false, message: 'Error retrieving products' });
+  }
+});
+
 app.post('/api/products', async (req, res) => {
-  const product = req.body; // user will send this data
+  const product = req.body;
 
   if (!product.name || !product.price || !product.image) {
     return res.status(400).json({
