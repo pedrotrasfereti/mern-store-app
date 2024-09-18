@@ -64,11 +64,14 @@ app.delete('/api/products/:id', async (req, res) => {
 
 app.put('/api/products/:id', async (req, res) => {
   const { id } = req.params;
-  const update = req.body;
+  const product = req.body;
 
   try {
-    await Product.findByIdAndUpdate(id, update);
-    return res.status(200).json({ success: true, message: 'Product updated' });
+    const updatedProduct = await Product.findByIdAndUpdate(id, product, {
+      new: true,
+    });
+
+    return res.status(200).json({ success: true, data: updatedProduct });
   } catch (error) {
     return res
       .status(500)
