@@ -6,13 +6,14 @@ This project was built along with a [Youtube tutorial series](https://www.youtub
 
 This web application allows the user to do the following:
 
-* Create new products, both in the UI and the database;
-* Edit or delete existing products, both from the UI and the database;
-* Change the color theme of the website using a toggle button;
+- Create new products, both in the UI and the database;
+- Edit or delete existing products, both from the UI and the database;
+- Change the color theme of the website using a toggle button;
 
 (Coming soon)
 
 <!-- CONTACT -->
+
 ## Contact
 
 Pedro Trasfereti - [LinkedIn](https://www.linkedin.com/in/pedro-trasfereti/) - pedrotrasfereti@gmail.com

@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "node --watch ./backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint backend",
+    "lint": "npx eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "npx prettier backend --check",
+    "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
     "format": "npm run prettier:fix && npm run lint:fix"
   },
