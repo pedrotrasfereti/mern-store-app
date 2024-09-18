@@ -62,6 +62,20 @@ app.delete('/api/products/:id', async (req, res) => {
   }
 });
 
+app.put('/api/products/:id', async (req, res) => {
+  const { id } = req.params;
+  const update = req.body;
+
+  try {
+    await Product.findByIdAndUpdate(id, update);
+    return res.status(200).json({ success: true, message: 'Product updated' });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, message: 'Error updating product' });
+  }
+});
+
 app.listen(5000, () => {
   connectDB();
   console.log('Server started at http://localhost:5000');
