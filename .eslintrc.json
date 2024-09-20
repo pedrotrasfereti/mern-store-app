@@ -17,7 +17,8 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "airbnb",
-    "plugin:node/recommended"
+    "plugin:node/recommended",
+    "prettier"
   ],
   "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
