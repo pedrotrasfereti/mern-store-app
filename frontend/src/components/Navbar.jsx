@@ -9,8 +9,8 @@ import {
   Text,
   useColorMode,
 } from '@chakra-ui/react';
-
 import { Link } from 'react-router-dom';
+
 import { PlusSquareIcon } from '@chakra-ui/icons';
 import { IoMoon } from 'react-icons/io5';
 import { LuSun } from 'react-icons/lu';
@@ -19,7 +19,7 @@ function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxH="1140px" px={4}>
+    <Container maxH="1140px" px={4} maxW="100%">
       <Flex
         h={16}
         alignItems="center"
