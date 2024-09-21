@@ -41,7 +41,7 @@ function HomePage() {
             fontWeight="bold"
             color="gray.500"
           >
-            No products found 😢
+            No products found 😢 &nbsp;
             <Link to="/create">
               <Text
                 as="span"
