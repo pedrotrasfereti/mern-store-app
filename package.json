@@ -8,11 +8,10 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "backend": "node --watch ./backend/server.js",
+    "backend": "NODE_ENV=development node --watch ./backend/server.js",
     "frontend": "vite --config ./frontend/vite.config.js",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && vite build --config ./frontend/vite.config.js",
+    "start": "NODE_ENV=production node ./backend/server.js",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier . --check",
