@@ -9,10 +9,11 @@ import {
   Image,
   Text,
   useColorModeValue,
+  useDisclosure,
   useToast,
 } from '@chakra-ui/react';
-
 import { DeleteIcon, EditIcon } from '@chakra-ui/icons';
+import EditProductModal from './EditProductModal.jsx';
 
 // Store
 import useProductStore from '../store/product.js';
@@ -21,8 +22,8 @@ function ProductCard({ product }) {
   // Theme
   const textColor = useColorModeValue('gray.500', 'gray.200');
   const bgColor = useColorModeValue('white', 'gray.800');
-
   const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const { deleteProduct } = useProductStore();
 
@@ -75,7 +76,7 @@ function ProductCard({ product }) {
         </Text>
 
         <HStack spacing={2}>
-          <IconButton icon={<EditIcon />} colorScheme="blue" />
+          <IconButton icon={<EditIcon />} colorScheme="blue" onClick={onOpen} />
           <IconButton
             icon={<DeleteIcon />}
             colorScheme="red"
@@ -83,6 +84,8 @@ function ProductCard({ product }) {
           />
         </HStack>
       </Box>
+
+      <EditProductModal product={product} isOpen={isOpen} onClose={onClose} />
     </Box>
   );
 }
