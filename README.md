@@ -10,7 +10,9 @@ This web application allows the user to do the following:
 - Edit or delete existing products, both from the UI and the database;
 - Change the color theme of the website using a toggle button;
 
-(Coming soon)
+<!-- DEMO -->
+## Live Demo
+You can check out the deployed app [here](https://mern-store-app-4yul.onrender.com/).
 
 <!-- CONTACT -->
 
